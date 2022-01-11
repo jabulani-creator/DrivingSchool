@@ -2,8 +2,6 @@ package com.drivingschool.client;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import com.drivingschool.entity.Admin;
 import com.drivingschool.entity.User;
 import com.drivingschool.service.UserService;
 
