@@ -50,7 +50,7 @@ public class CoachDao {
 		try
 		{
 			Connection conn = DbUtil.getConnection();
-			String sql = "delete from coach_table where id=?";
+			String sql = "delete from coach_table where coach_id=?";
 			
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, id);

@@ -72,7 +72,7 @@ public class UserDao {
 		try
 		{
 			Connection conn = DbUtil.getConnection();
-			String sql = "delete from coach_table where name=?";
+			String sql = "delete from users where username=?";
 			
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setString(1, name);

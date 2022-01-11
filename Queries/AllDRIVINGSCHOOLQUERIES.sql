@@ -69,6 +69,7 @@ ON admin_table FOR EACH ROW
 	VALUES(new.admin_name, new.admin_password,new.role);
 
 INSERT INTO admin_table(admin_name,admin_password) VALUES('Charinga Jabulani', 'jabu21');
+INSERT INTO admin_table(admin_name,admin_password) VALUES('Henry Anthony', 'henry123');
 
 
 

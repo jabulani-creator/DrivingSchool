@@ -45,7 +45,7 @@ public class Coach {
 	}
 	@Override
 	public String toString() {
-		return "Coach [ id: "  + id + " name: " + name + "  gender: " + gender + "  password: " + password + "]\n\n";
+		return "Coach [ id: "  + id + " name: " + name + "  gender: " + gender + "]\n\n";
 	}
 	
 	

@@ -40,7 +40,7 @@ public class UserClient {
 					upass = sc.next();
 					user.setPass(upass);
 					
-					System.out.print("Role: ");
+					System.out.print("Role(admin, trainee, coach): ");
 					role = sc.next();
 					user.setRole(role);
 						
@@ -57,7 +57,8 @@ public class UserClient {
 					
 				case 2:
 					System.out.print("Username: ");
-					String username = sc.next();
+					String username = sc.nextLine();
+					username += sc.nextLine();
 					
 					if(service.deleteUser(username))
 					{

@@ -8,8 +8,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.drivingschool.dao.DbUtil;
+import com.drivingschool.entity.Coach;
 import com.drivingschool.entity.Exams;
 import com.drivingschool.entity.Trainee;
+import com.drivingschool.service.CoachService;
 import com.drivingschool.service.ExamService;
 import com.drivingschool.service.TraineeService;
 
@@ -19,6 +21,7 @@ public class TraineeClient {
 	static Connection conn = DbUtil.getConnection();
 	static Trainee trainee = new Trainee();
 	static TraineeService service = new TraineeService();
+	static CoachService service2 = new CoachService();
 	static ExamService eservice = new ExamService();
 	static Scanner sc = new Scanner(System.in);
 	
@@ -52,14 +55,17 @@ public class TraineeClient {
 					tgender = sc.next();
 					trainee.setTrainee_gender(tgender);
 					
-					System.out.print("Date of Birth: ");
+					System.out.print("Date of Birth(0000/00/00): ");
 					tdob = sc.next();
 					trainee.setTrainee_DOB(tdob);
 					
 					System.out.print("Password: ");
 					tpass = sc.next();
 					trainee.setTrainee_pass(tpass);
-									
+						
+					System.out.print("Coaches Available: \n");
+					ArrayList<Coach> List2 = service2.displayCoaches(); 
+					System.out.println(List2);
 					System.out.print("Coach Name: ");
 					cname = sc.nextLine();
 					cname += sc.nextLine();

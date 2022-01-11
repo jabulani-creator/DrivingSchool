@@ -54,7 +54,7 @@ public class Admin {
 
 	@Override
 	public String toString() {
-		return "Admin [ id: "  + id + " name: "  + name + " password:  " + password + "]\n\n";
+		return "Admin [ id: "  + id + " name: "  + name + "]\n\n";
 	}
 	
 	

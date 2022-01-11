@@ -140,7 +140,7 @@ public class Trainee {
 	@Override
 	public String toString() {
 		return "Trainee [ trainee_id: " + trainee_id + "  trainee_name: " + trainee_name + "  trainee_gender: "
-				+ trainee_gender + "  trainee_DOB: " + trainee_DOB + "  trainee_pass: " + trainee_pass + "  coach_name: "
+				+ trainee_gender + "  trainee_DOB: " + trainee_DOB + "  coach_name: "
 				+ coach_name + ", coach_id: " + coach_id + "]\n\n";
 	}
 

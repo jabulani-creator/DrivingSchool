@@ -53,7 +53,7 @@ public class Login {
 						password = sc.next();
 						user.setPass(password);
 						
-						System.out.println("Enter Role: ");
+						System.out.println("Enter Role(admin, trainee, coach): ");
 						role = sc.next();
 						user.setRole(role);
 						

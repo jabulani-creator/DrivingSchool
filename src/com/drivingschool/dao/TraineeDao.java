@@ -86,8 +86,8 @@ public class TraineeDao {
 			
 			while(rs.next())
 			{
-				Trainee prod = new Trainee(rs.getInt("trainee_id"),rs.getString("trainee_name"),rs.getString("trainee_gender"),
-						rs.getString("date_of_birth"),rs.getString("trainee_pass"),rs.getString("coach_name"), rs.getInt("coach_id"));
+				Trainee prod = new Trainee(rs.getInt("trainee_id"),rs.getString("trainee_name"),rs.getString("gender"),
+						rs.getString("date_of_birth"),rs.getString("trainee_password"),rs.getString("coach_name"), rs.getInt("coach_id"));
 				
 
 				List.add(prod);
