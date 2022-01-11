@@ -1,7 +1,9 @@
 package com.drivingschool.client;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.drivingschool.entity.Admin;
 import com.drivingschool.entity.User;
 import com.drivingschool.service.UserService;
 
@@ -20,7 +22,7 @@ public class UserClient {
 			User user = new User();
 			UserService service = new UserService();
 			
-			System.out.println("1.Add Users\n2.Delete Users\n3.Exit");
+			System.out.println("1.Add Users\n2.Delete Users\n3.Query Users\n4.Exit");
 			System.out.print("\nChoose option:");
 			int option = sc.nextInt();
 			
@@ -68,8 +70,11 @@ public class UserClient {
 						System.out.println("\n..Failed to delete...");
 					}
 					break;
-					
 				case 3:
+					ArrayList<User> List = service.displayUsers();
+					System.out.println(List);
+					break;
+				case 4:
 					loop++;
 					break;
 					

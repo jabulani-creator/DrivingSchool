@@ -4,10 +4,41 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
+import com.drivingschool.entity.Admin;
 import com.drivingschool.entity.User;
 
 public class UserDao {
+	
+	public ArrayList<User> displayUsers()
+	{
+		ArrayList<User> List = new ArrayList<User>();
+		try
+		{
+			Connection conn = DbUtil.getConnection();
+			String sql = "select * from Users";
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			ResultSet rs = stmt.executeQuery();
+			
+			while(rs.next())
+			{
+				User prod = new User(rs.getString("username"),rs.getString("password"), rs.getString("role"));
+				
+				List.add(prod);
+			}
+			
+			stmt.close();
+			rs.close();
+			conn.close();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return List;
+	}
+		
 	
 	public boolean insertUser(User user) {
 			
@@ -94,4 +125,5 @@ public class UserDao {
 		}
 		return false;
 	}
+	
 }

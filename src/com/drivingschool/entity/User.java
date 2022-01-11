@@ -47,6 +47,13 @@ public class User {
 
 
 
+	@Override
+	public String toString() {
+		return "User [ name: " + name + "  pass: " + pass + "  role: " + role + "]\n\n";
+	}
+
+
+
 	public String getRole() {
 		return role;
 	}

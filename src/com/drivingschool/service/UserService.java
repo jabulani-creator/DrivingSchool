@@ -1,6 +1,7 @@
 package com.drivingschool.service;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.drivingschool.dao.UserDao;
 import com.drivingschool.entity.User;
@@ -18,6 +19,9 @@ public class UserService {
 	public boolean deleteUser(String name)
 	{
 		return new UserDao().deleteUser(name);
+	}
+	public ArrayList<User> displayUsers(){
+		return new UserDao().displayUsers();
 	}
 	
 }
